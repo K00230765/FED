@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container" style="background-image = url(<%=icon %>)">
+      <fieldset>
+        <form action="/" method="post">
+          <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+          <input type="submit" class="ghost-button" value="Get Weather">
+        </form>
+        <div class = "grid container">  
+            <div id= "info1">
+        <% if(weather !== null){ %>
+          <p><%= weather %></p>
+        <% } %>
+        
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+            </div>
+          
+            <div id= "info2">
+          <% if(pressure !== null){ %>
+          <p><%= pressure %></p>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+            </div>
+          
+            <div id="info3">
+        <% if(humidity !== null){ %>
+          <p><%= humidity %></p>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+            </div>
+            
+            <div id="info4">
+        <% if(windSpeed !== null){ %>
+          <p><%= windSpeed %></p>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+            </div>
+          
+              <div id= "info5">
+        <% if(windDirection !== null){ %>
+          <p><%= windDirection %></p>
+        <% } %>
+              
+        <div class="directionImg">
+              <img class ="windDr" src="<% windDirectionDegree %>">
+        </div>
+                  
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+            </div>
+          
+            <div id="info6">
+        <% if(description !== null){ %>
+          <p><%= description %></p>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+            </div>
+          
+        
+          </div>
+     
+      </fieldset>
+    </div>
+  </body>
+</html>

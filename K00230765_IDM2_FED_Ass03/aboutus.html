@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html>
+    <head> 
+    <title>Sweet Stuff</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        
+<div id="app">
+<header>
+        <div class="nav-bar">
+            <ul class="nav">
+    <li><a href="homepage.html"><span class="navword">Home</span></a></li>
+    <li><a href="products.html"><span class="navword">Products</span></a></li>
+    <li><a href="shoppingcart.html"><span class="navword">Cart({{cart.length}})</span></a></li>
+    <li><a href="aboutus.html"><span class="navword">About Us</span></a></li>
+    <li><a href="contactus.html"><span class="navword">Contact Us</span></a></li>
+            </ul>
+        </div>
+</header>
+    
+    <main>
+    <div class="mapContainer">                
+            <h1>About Us!</h1>
+            <hr>
+            <p>Use the map below to find our location.</p>
+            <div id="map"></div>
+        </div>
+    </main>
+        
+        
+        <script>
+            var map;
+            function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+            }
+            
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjihXL3p4xr96LdtqQdjBnbEpe8ToSb50&callback=initMap"
+        async defer></script>
+
+
+
+    
+    <footer>
+    <p> &copy; sweetStuff.com (2019) </p>
+</footer>
+        </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script src="https://unpkg.com/vue"></script>
+    <script src="main.js"></script>
+    </body>
+    </html>
